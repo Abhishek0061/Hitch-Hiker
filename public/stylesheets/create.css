@@ -1,0 +1,104 @@
+*{  font-family: 'Times New Roman', Times, serif;
+}
+    body {
+    font-family: Arial, sans-serif;
+    background: #0b1320; /* Black background */
+    color: #464545; /* Light grey text color */
+    margin: 0;
+    padding: 20px 0;
+}
+
+.container {
+    position: relative;
+    min-height: 380px;
+    margin: 20px auto;
+    /* max-width: 1200px; Adjust as needed */
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(/images/createFoem.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(2px);
+    z-index: -1;
+}
+
+.form {
+    right: 0;
+    margin: 20px;
+    padding: 15px;
+    width: 30vw;
+    background-color: #555657;
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: absolute;
+    right: 100px;
+    top: 85%;
+    transform: translateY(-50%);
+}
+
+form {
+    display: grid;
+}
+
+label {
+    font-weight: bold;
+    color: #fff; /* White text color */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"] {
+    padding: 10px;
+    box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.838);
+    background-color: #24252712;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    width: 90%;
+    color: #fff;
+    border: none;
+}
+
+.gender label {
+    display: inline-block;
+    margin-right: 20px;
+    color: #fff; /* White text color */
+}
+
+.gender input[type="radio"] {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+input[type="submit"] {
+    background-color: #0b1320;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: cadetblue; /* Darker green on hover */
+}
+
+.error-message {
+    color: red;
+    margin-top: 5px;
+}
+
+.success-message {
+    color: rgb(21, 141, 115);
+    margin-top: 5px;
+}

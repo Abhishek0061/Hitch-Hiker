@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Booking Ride</title>
+</head>
+<style>body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  color: #333;
+  margin-top: 20px;
+}
+
+p {
+  color: #666;
+}
+
+form {
+  margin-top: 20px;
+}
+
+input[type="hidden"] {
+  display: none;
+}
+
+button[type="submit"] {
+  background-color: #1997a0;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button[type="submit"]:hover {
+  background-color: #0b1320;
+}
+</style>
+<body>
+  <h1>Ride Details</h1>
+  
+  <p>Departure: <%= ride.departure %></p>
+  <p>Destination: <%= ride.destination %></p>
+  <p>Date: <%= ride.date %></p>
+  <p>Available Seats: <%= ride.available_seats %></p>
+  <p>Price: <%= ride.price %></p>
+  <p>Contact: <%= ride.contact %></p>
+  <form action="/submit-booking" method="post" id="submit-booking">
+    <input type="hidden" name="rideId" value="<%= ride.rideId %>" id="rideId">
+    <button type="submit">Book Now</button>
+  </form>
+  <script>
+      const token = localStorage.getItem('Token');
+      document.getElementById('submit-booking').addEventListener('submit', async (event) => {
+        event.preventDefault();
+        const rideId = document.getElementById('rideId').value;
+        const response = await fetch('/submit-booking', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                     'Authorization': "Bearer " + token
+                 },
+            body: JSON.stringify({rideId})
+        });
+        if (response.ok) {
+          alert('Ride booked successfully!');
+            window.location.href = "/home";       
+        } else {
+            alert("error occured");
+        }
+    });
+</script>
+</body>
+</html>

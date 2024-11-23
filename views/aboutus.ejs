@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+        }
+        h1 {
+            text-align: center;
+            color: #444;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        p {
+            line-height: 1.8;
+            color: #666;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+        .highlight {
+            color: #0056b3;
+            font-weight: bold;
+        }
+        .container::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            bottom: -10px;
+            left: -10px;
+            background: linear-gradient(135deg, #6ab1d7 0%, #33d9b2 100%);
+            z-index: -1;
+            filter: blur(30px);
+        }
+        @media (max-width: 768px) {
+            .container {
+                margin: 20px;
+                padding: 15px;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>About Us</h1>
+        <p>
+            Welcome to <span class="highlight">HitchHiker</span>! We are dedicated to providing a safe and reliable ride-sharing platform for everyone. Our mission is to connect drivers with passengers in a seamless and efficient way, ensuring a great experience for both parties.
+        </p>
+        <p>
+            At <span class="highlight">HitchHiker</span>, we believe in the power of community and the importance of making travel more accessible and affordable. Our platform allows drivers to offer rides to others heading in the same direction, reducing the number of cars on the road and promoting sustainable travel.
+        </p>
+        <p>
+            Our team is passionate about creating a user-friendly experience and we are constantly working to improve our service. We value your feedback and are here to assist you with any questions or concerns you may have.
+        </p>
+        <p>
+            Thank you for choosing <span class="highlight">HitchHiker</span>. We look forward to being a part of your journey!
+        </p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hitch Hiker-Help & Support</title>
+    <link rel="stylesheet" href="stylesheets/help&support.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">
+                <img src="/images/logo.png" alt="RideNow Logo" class="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="modal" data-target="#navbarModal"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/findRide">Find a Ride</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/postRide">Offer a Ride</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/myrides">My Rides</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/helpAndSupport">Help & Support</a>                    </li>
+                    <input type="text" id="searchInput" placeholder="Search Help Topics">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img src="https://via.placeholder.com/150" alt="User Picture" class="userPic">
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Update Profile</a>
+                            <a class="dropdown-item" href="#">Settings</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="/logout"><i class="fas fa-sign-out-alt"></i>Logout</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="modal fade" id="navbarModal" tabindex="-1" aria-labelledby="navbarModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="navbarModalLabel">Menu</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/findRide">Find a Ride</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/postRide">Offer a Ride</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/myrides">My Rides</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/helpAndSupport">Help & Support</a>
+                        </li>
+                        <input type="text" id="searchInput" placeholder="Search Help Topics">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Update Profile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Settings</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/logout"><i class="fas fa-sign-out-alt"></i>Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <section id="getting-started">
+            <div class="gettingStarted">
+                <div class="column1">
+                    <img src="images/gettingStarted.jpg" alt="Snow" style="width:100%">
+                </div>
+                <div class="column2">
+                    <div class="outer card" id="outerCard">
+                        <h2>Getting Started</h2>
+                        <p>Learn how to create an account, list a carpool, or find a ride.</p>
+                    </div>
+                    <div class="inner" id="innerCards" style="display: none;">
+                        <h2>Getting Started</h2>
+                        <div class="grid-container">
+                            <div class="card">
+                                <h3>Create an Account</h3>
+                                <p>To get started, you'll need to create an account. Click on the "Sign Up" button at
+                                    the top right corner of the page and follow the prompts to register. Make sure to
+                                    verify your email address to activate your account.</p>
+                            </div>
+                            <div class="card">
+                                <h3>List a Carpool</h3>
+                                <p>Once you're logged in, you can list your carpool by clicking on the "List a Ride"
+                                    button. Provide details such as your starting location, destination, departure time,
+                                    and any additional preferences or requirements.</p>
+                            </div>
+                            <div class="card">
+                                <h3>Find a Ride</h3>
+                                <p>If you're looking for a ride, simply click on the "Find a Ride" button. You can
+                                    search for available carpools based on your desired route, departure time, and other
+                                    preferences.</p>
+                            </div>
+
+                            <div class="card">
+                                <h3>Additional Information</h3>
+                                <p>That's it! You're now ready to start hitching rides or offering them to others. If
+                                    you have any questions or need further assistance, don't hesitate to reach out to
+                                    our support team.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="drivers">
+
+            <div class="drivers">
+                <div class="outer-card" id="outerCard">
+                    <h2>For Drivers</h2>
+
+                    <div class="grid-container">
+                        <div class="card">
+                            <h3>Create a Carpool Listing</h3>
+                            <p>To offer a ride, you'll need to create a carpool listing. Click on the "List a Ride"
+                                button and provide details such as your starting location, destination, departure time,
+                                and any preferences or requirements you have for passengers.</p>
+                        </div>
+                        <div class="card">
+                            <h3>Manage Passengers</h3>
+                            <p>Once your carpool listing is live, passengers can request to join your ride. You'll
+                                receive notifications of these requests, and you can accept or reject them as needed.
+                                Make sure to communicate with your passengers and coordinate meeting points and times.
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3>Collect Payments</h3>
+                            <p>Payments for rides can be managed through our platform. Make sure to set your payment
+                                preferences and collect payments from passengers either before or after the ride.
+                                Payments are processed securely, and you'll receive your earnings directly to your
+                                linked account.</p>
+                        </div>
+                        <div class="card">
+                            <h3>Stay Safe</h3>
+                            <p>While offering rides, safety is our top priority. Make sure to follow all traffic laws
+                                and regulations, and communicate any safety guidelines or rules to your passengers.
+                                Always verify the identity of your passengers before starting the ride, and trust your
+                                instincts if anything feels off.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="riders">
+            <div class="riders">
+                <div class="outer-card" id="outerCard">
+                    <h2>For Riders</h2>
+
+                    <div class="grid-container">
+                        <div class="card">
+                            <h3>Find a Ride</h3>
+                            <p>To find a ride, click on the "Find a Ride" button. You can search for available carpools based on your desired route, departure time, and any other preferences you may have. Once you find a suitable ride, you can request to join it.</p>
+                            
+                           </div>
+                        <div class="card">
+                            <h3>Join a Carpool</h3>
+                            <p>After finding a ride that fits your needs, you can request to join the carpool. The driver will receive your request and can accept or reject it based on availability. Once accepted, make sure to coordinate meeting points and times with the driver.</p>
+                              
+                        </div>
+                        <div class="card">
+                            <h3>Make Payments</h3>
+                            <p>Payments for rides can be made securely through our platform. You'll have the option to pay for your ride either before or after the trip, depending on the driver's preferences. Payments are processed securely, and you'll receive a confirmation once the payment is completed.</p>
+                            
+                        </div>
+                        <div class="card">
+                            <h3>Stay Safe</h3>
+                            <p>While riding with us, safety is our top priority. Make sure to verify the identity of your driver before getting into the car, and communicate any specific safety concerns or requirements you may have. If you ever feel uncomfortable during the ride, don't hesitate to speak up or ask the driver to pull over.</p>
+                              </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section id="troubleshooting">
+            <h2>Common Issues and Solutions</h2>
+      <p >If you're experiencing any issues while using our carpooling service, check out the solutions below:</p>
+      
+      <div class="qa">
+      <p class="ques">Problem: Unable to Find a Ride</p>
+      <p class="ans">Solution: Make sure to adjust your search criteria, including your desired route, departure time, and passenger preferences. If you still can't find a ride, consider expanding your search radius or trying again at a different time.</p>
+      </div>
+      <div class="qa">
+      <p class="ques">Problem: Payment Failure</p>
+      <p class="ans">Solution: Double-check your payment method details and ensure that there are sufficient funds available. If the issue persists, try using a different payment method or contact your bank for assistance.</p>
+      </div>
+      <div class="qa">
+      <p class="ques">Problem: Driver No-Show</p>
+      <p class="ans">Solution: If your driver fails to show up for the scheduled ride, contact our support team immediately for assistance. We'll work to resolve the issue and help you find an alternative solution.</p>
+       </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="feedback">
+                <ul>
+                    <li><a href="/feedback">
+                            <h3>Give Feedback</h3>
+                        </a></li>
+                </ul>
+                <p>We'd love to hear from you! Let us know how we can improve.</p>
+                <a href="mailto:support@hitchhiker.com">support@hitchhiker.com</a>
+            </div>
+            <div class="social">
+                <h3>Connect with Us</h3>
+                <ul>
+                    <li><a href="https://twitter.com/hitchhiker" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
+                    <li><a href="https://www.facebook.com/hitchhiker" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+                    <li><a href="https://www.instagram.com/hitchhiker" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+                </ul>
+            </div>
+            <div class="legal">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="/terms">Terms of Service</a></li>
+                    <li><a href="/privacy">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <p>&copy; 2024 Hitch Hiker. All rights reserved.</p>
+    </footer>
+    
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="help&support.js"></script>
+    <script>// help&support.js
+        document.addEventListener("DOMContentLoaded", function() {
+            var outerCard = document.getElementById("outerCard");
+            var innerCards = document.getElementById("innerCards");
+            var innerHeading = document.querySelector("#innerCards h2");
+        
+            outerCard.addEventListener("click", function() {
+                outerCard.style.display = "none"; // Hide the outer card
+                innerCards.style.display = "block"; // Show the inner cards
+            });
+        
+            innerHeading.addEventListener("click", function() {
+                innerCards.style.display = "none"; // Hide the inner cards
+                outerCard.style.display = "block"; // Show the outer card
+            });
+        });
+        </script>
+          <script>
+            document.addEventListener("DOMContentLoaded", function() {
+            const searchInput = document.getElementById("searchInput");
+            const sections = document.querySelectorAll("section");
+          
+            searchInput.addEventListener("input", function() {
+              const searchTerm = searchInput.value.toLowerCase();
+          
+              sections.forEach(section => {
+                const sectionId = section.getAttribute("id");
+                const sectionTitle = section.querySelector("h2").innerText.toLowerCase();
+          
+                if (sectionTitle.includes(searchTerm)) {
+                  section.style.display = "block";
+                } else {
+                  section.style.display = "none";
+                  }
+                });
+             });
+            });
+            </script>
+          
+
+</body>
+
+</html>

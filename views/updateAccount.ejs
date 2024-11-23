@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/updateAccount.css" />
+    <title>Update Account</title>
+</head>
+<body>
+    <div class="container">
+        <form class="form" id="updateForm" action="/updateAccount" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="password">New Password:</label>
+                <input type="password" id="password" name="password">
+            </div>
+            <div class="form-group">
+                <label for="confirmpassword">Confirm New Password:</label>
+                <input type="password" id="confirmpassword" name="confirmpassword">
+            </div>
+            <input type="submit" value="Update Account">
+        </form>
+    </div>
+    <script>
+        const token = localStorage.getItem('Token');
+        document.getElementById('updateForm').addEventListener('submit', async (event) => {
+            event.preventDefault();
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const phone = document.getElementById("phone").value;
+            const password = document.getElementById("password").value;
+            const confirmpassword = document.getElementById("confirmpassword").value;
+
+            if (password && password !== confirmpassword) {
+                alert("Passwords do not match");
+                return;
+            }
+
+            const response = await fetch('/updateAccount', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': "Bearer " + token
+                },
+                body: JSON.stringify({ name, email, phone, password })
+            });
+
+            if (response.ok) {
+                const data = await response.json();
+                alert(data.message);
+                window.location.href = "/home";
+            } else {
+                alert("An error occurred while updating the account.");
+            }
+        });
+    </script>
+</body>
+</html>
